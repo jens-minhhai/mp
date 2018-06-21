@@ -1,0 +1,61 @@
+/**
+ * Variables
+ */
+@import "variables";
+
+/**
+ * Bootstrap
+ */
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/functions";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/variables";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/mixins";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/root";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/print";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/reboot";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/type";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/images";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/code";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/grid";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/tables";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/forms";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/buttons";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/transitions";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/dropdown";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/button-group";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/input-group";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/custom-forms";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/nav";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/navbar";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/card";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/breadcrumb";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/pagination";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/badge";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/jumbotron";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/alert";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/progress";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/media";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/list-group";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/close";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/modal";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/tooltip";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/popover";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/carousel";
+ @import "../../../../../../../env/builder/admin/node_modules/bootstrap/scss/utilities";
+
+/**
+ * Carbon
+ */
+@import "mixins";
+@import "layout";
+@import "sidebar";
+@import "header";
+@import "card";
+@import "alert";
+@import "buttons";
+@import "forms";
+@import "nav";
+@import "navbar";
+@import "utilities";
+@import "avatars";
+@import "switches";
+@import "reboot";

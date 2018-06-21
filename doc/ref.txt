@@ -1,0 +1,9 @@
+https://www.jqueryscript.net/menu/Create-An-Off-canvas-Sidebar-Navigation-with-jQuery-Bootstrap.html
+
+http://imagine.readthedocs.io/en/latest/usage/introduction.html#create-new-images
+http://image.intervention.io/
+
+https://genesisui.com/demo/clever/1.8.10/bootstrap4-static/forms-basic-forms.html
+http://demo.interface.club/limitless/layout_1/LTR/default/index.html
+
+ln -s "$(pwd)/storage/media" "$(pwd)/public/media" 

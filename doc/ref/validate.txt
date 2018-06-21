@@ -1,0 +1,2 @@
+https://gist.github.com/augustohp/d9275aca4cf6d833888e
+https://www.codecourse.com/forum/topics/respect-validation-authentication-with-slim-3

@@ -1,0 +1,45 @@
+{% set form_item = {
+        id: {
+            attributes: {},
+            id: 'product-id',
+            name: 'product[id]',
+            value: target.id,
+            type: 'hidden',
+        },
+        title: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('title', form_error),
+            id: 'product-title',
+            label: 'Title',
+            name: 'product[title]',
+            value: form_input('product.title', target.title),
+            type: 'text',
+        },
+        name: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('name', form_error),
+            id: 'product-name',
+            label: 'Name',
+            name: 'product[name]',
+            value: form_input('product.name', target.name),
+            type: 'text',
+        },
+        mode: {
+            attributes: {
+            },
+            error: error('mode', form_error),
+            id: 'product-mode',
+            label: 'Mode',
+            name: 'product[mode]',
+            option: form.master.mode,
+            value: form_input('product.mode', target.mode),
+            type: 'select_single',
+        }
+    }
+%}
+
+{% include 'library/form/detail.twig' with {form_item: form_item} %}

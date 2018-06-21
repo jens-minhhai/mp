@@ -1,0 +1,47 @@
+{% import 'library/marco/spinner/spinner.twig' as marco_spinner %}
+
+{% set attribute_string = '' %}
+{% for attribute_name, attribute_value in form_field.attributes %}
+    {% set attribute_string = ( attribute_name ~ '="' ~ attribute_value ~ '"' ) %}
+{% endfor %}
+
+<div class='j-dropzone' {{ attribute_string|raw }}>
+    <input id='{{ form_field.id }}' class="j-file {{ form_field.class }} mp-hidden" name="{{ form_field.name }}" type='file' {{ attribute_string|raw }}/>
+    <div class='j-dropzone--placeholder dropzone--placeholder form-control' name='{{ form_field.name }}' {{ attribute_string|raw }}>
+        {{ form_field.placehoder }}
+        {{ marco_spinner.show() }}
+    </div>
+    <div class='j-dropzone--feedback'></div>
+    <div class='dropzone--canvas'>
+        <div class="container">
+            <div class="row j-dropzone--canvas">
+                {% if form_field.value %}
+                    {% for i in 1..5 %}
+                        <div class="col-3 dropzone--item">
+                            <figure class='dropzone--item__figure'>
+                                <input type="hidden" name="{{ form_field.name }}" value="{{ form_field.value.id }}"/>
+                                <img class='dropzone--item__img' src="{{ form_field.value.thumbnail_medium }}" alt="{{ form_field.value.title }}">
+                                <figcaption class="dropzone--item__figcaption j-remove">Remove</figcaption>
+                            </figure>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <script class="dropzone--tpl" type="text/template">
+                    <div class="col-3 dropzone--item">
+                        <figure class='dropzone--item__figure'>
+                            <input type="hidden" name="{{ form_field.name }}" value="#id#"/>
+                            <img class='dropzone--item__img' src="#src#" alt="#title#">
+                            <figcaption class="dropzone--item__figcaption j-remove">Remove</figcaption>
+                        </figure>
+                    </div>
+                </script>
+            </div>
+        </div>
+
+        {% if form_field.error %}
+            <div class='invalid-feedback'>
+                {{ form_field.error }}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{% set default = {
+    index: index|default(''),
+    active: active|default('1'),
+    mode: mode,
+}%}
+
+{% for item in form_item %}
+    {% set item = item | merge( default ) %}
+    {% include 'library/form/item.twig' with {
+        form_item : item
+    } %}
+{% endfor %}

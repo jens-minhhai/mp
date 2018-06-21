@@ -1,0 +1,80 @@
+{% extends 'layout/default.twig' %}
+{% import 'library/marco/alert/flash.twig' as marco_flash %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header border border-top-0 border-right-0 border-left-0">
+            {{ msg('9.1', 'Config') }}
+        </div>
+        <div class="card-body">
+            {{ marco_flash.show('message') }}
+
+            <form method='post' class='j-form' action='{{ url("#{base_url}/modify") }}'>
+                {{ form_crsf() }}
+
+                {% set option = {
+                    ( constant( 'UPDATE' ) ): msg( '1.12', 'Update' )
+                } + form.master.mode %}
+
+                {% include 'component/common/table/option.twig' with {
+                    option : option,
+                    base_url: base_url,
+                    name: 'config[option]'
+                } %}
+
+                <table class="j-data_table table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class='text-center'>
+                                <label class="checkbox--container">
+                                    <input class='j-checkAll' type='checkbox' data-target='j-checkItem'/>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </th>
+                            <th>{{ msg('9.4', 'Mode') }}</th>
+                            <th class='w-25'>{{ msg('9.2', 'Code') }}</th>
+                            <th class='w-55'>{{ msg('9.3', 'config') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                <td class='text-center'>
+                                    <label class="checkbox--container">
+                                        <input class='j-checkItem' type='checkbox' name='config[id][]' value='{{ item.id }}' data-target="{{ 'config-value-%s'|format(item.id) }}"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>{{ mode(item.mode, 'config.master.mode') }}</td>
+                                <td>
+                                    <a href='{{ url("#{base_url}/#{item.id}/edit") }}' title='{{ item.code }}'>
+                                        {{ item.code }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class='row'>
+                                        <div class='col-sm-10'>
+                                            {% include 'library/form/field.twig' with {
+                                                form_field: {
+                                                    attributes: {
+                                                        type: 'text',
+                                                        readonly: 'readonly'
+                                                    },
+                                                    error: {},
+                                                    id: "config-value-#{item.id}",
+                                                    name: "config[value][#{item.id}]",
+                                                    value: form_input('config.value', item.value),
+                                                    type: 'text',
+                                                }
+                                            } %}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock %}

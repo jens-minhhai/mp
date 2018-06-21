@@ -1,0 +1,8 @@
+<input id="{{ form_field.id }}"
+       type="hidden"
+       name="{{ form_field.name }}"
+       value="{{ form_field.value }}"
+       {% for attribute_name, attribute_value in form_field.attributes %}
+           {{ attribute_name }}="{{ attribute_value }}"
+       {% endfor %}
+/>

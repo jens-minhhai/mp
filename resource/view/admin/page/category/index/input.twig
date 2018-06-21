@@ -1,0 +1,43 @@
+{% extends 'layout/default.twig' %}
+{% import 'library/marco/alert/flash.twig' as marco_flash %}
+
+{% block content %}
+    {% set view_form = {
+            attribute: {
+            },
+            blocks: {
+                basic: {
+                    class: '',
+                    error: attribute(error, 'category')|default({}),
+                    file: 'page/category/index/form/basic.twig',
+                    option: {
+                        id: 'basic-form'
+                    },
+                    target: target,
+                    title: msg('3.10', 'Basic')
+                },
+                seo: {
+                    file: 'component/common/form/partial/seo.twig',
+                    error: attribute(error, 'seo')|default({}),
+                    option: {
+                        id: 'seo-form'
+                    },
+                    target: target.seo,
+                    title: msg('3.11', 'SEO'),
+                }
+            },
+            panel: {
+                file: 'component/common/form/panel.twig',
+                option: {
+                    back_url: url(base_url)
+                }
+            },
+        }
+    %}
+
+    {{ marco_flash.show('message') }}
+
+    {% include 'library/form/builder.twig' with {
+        view_form : view_form
+    } %}
+{% endblock %}

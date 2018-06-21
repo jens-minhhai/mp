@@ -1,0 +1,20 @@
+{% macro show( option ) %}
+    {% set message = msg( '1.7', 'Error, please try again later.' ) %}
+    {% if option.flag %}
+        {% if option.mode == constant( 'DELETE' ) %}
+            {% set message = msg( '1.8', 'Data has been deleted.' ) %}
+        {% else %}
+            {% set message = msg( '1.9', 'Data has been saved.' ) %}
+        {% endif %}
+    {% endif %}
+
+    {% set type = option.flag
+        ? 'success'
+        : 'danger' %}
+    <div class="alert alert-{{ type }} alert-dismissible" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endmacro %}

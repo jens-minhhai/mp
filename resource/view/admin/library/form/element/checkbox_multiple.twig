@@ -1,0 +1,20 @@
+<div class='radio-group'>
+    {% for key, item in option %}
+    <div class="radio">
+        <label>
+            <input type="checkbox"
+                name="{{ form_field.name }}[{{ key }}]"
+                id="{{ form_field.id }}{{ key }}"
+                value="{{ key }}"
+                class='j-checkbox_multiple {{ form_field.class }}' />
+            {{item}}
+        </label>
+    </div>
+    {% endfor %}
+</div>
+
+{% if form_field.error %}
+    <div class='invalid-feedback'>
+        {{ form_field.error }}
+    </div>
+{% endif %}

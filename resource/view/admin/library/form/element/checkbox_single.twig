@@ -1,0 +1,21 @@
+<div class='checkbox'>
+    <input type="hidden" name="{{ form_field.name }}" value="{{ form_field.default_value }}"
+        id="{{form_field.id}}-hidden" />
+    <label>
+    <input id="{{ form_field.id }}"
+           class="j-checkbox_single {{ form_field.class }}"
+           type="checkbox"
+           name="{{ form_field.name }}"
+           value="1"
+           {% for attribute_name, attribute_value in form_field.attributes %}
+               {{ attribute_name }}="{{ attribute_value }}"
+           {% endfor %}
+    />
+    </label>
+</div>
+
+{% if form_field.error %}
+    <div class='invalid-feedback'>
+        {{ form_field.error }}
+    </div>
+{% endif %}

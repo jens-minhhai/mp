@@ -1,0 +1,34 @@
+{% extends 'layout/default.twig' %}
+{% import 'library/marco/alert/flash.twig' as marco_flash %}
+
+{% block content %}
+    {% set view_form = {
+            attribute: {
+            },
+            blocks: {
+                basic: {
+                    class: '',
+                    error: attribute(error, 'message')|default({}),
+                    file: 'page/group/form/basic.twig',
+                    option: {
+                        id: 'basic-form'
+                    },
+                    target: target,
+                    title: msg('8.5', 'Basic')
+                },
+            },
+            panel: {
+                file: 'component/common/form/panel.twig',
+                option: {
+                    back_url: url(base_url)
+                }
+            },
+        }
+    %}
+
+    {{ marco_flash.show('message') }}
+
+    {% include 'library/form/builder.twig' with {
+        view_form : view_form
+    } %}
+{% endblock %}

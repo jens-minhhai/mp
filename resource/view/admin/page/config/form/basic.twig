@@ -1,0 +1,45 @@
+{% set form_item = {
+        id: {
+            attributes: {},
+            id: 'config-id',
+            name: 'config[id]',
+            value: target.id,
+            type: 'hidden',
+        },
+        code: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('code', form_error),
+            id: 'config-code',
+            label: msg('9.2', 'Code'),
+            name: 'config[code]',
+            value: form_input('config.code', target.code),
+            type: 'text',
+        },
+        value: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('config', form_error),
+            id: 'config-value',
+            label: msg('9.3', 'Value'),
+            name: 'config[value]',
+            value: form_input('config.value', target.value),
+            type: 'text',
+        },
+        mode: {
+            attributes: {
+            },
+            error: error('mode', form_error),
+            id: 'config-mode',
+            label: msg('9.4', 'Mode'),
+            name: 'config[mode]',
+            option: form.master.mode,
+            value: form_input('config.mode', target.mode),
+            type: 'select_single',
+        }
+    }
+%}
+
+{% include 'library/form/detail.twig' with {form_item: form_item} %}

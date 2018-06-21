@@ -1,0 +1,36 @@
+{% set form_item = {
+        id: {
+            attributes: {},
+            id: 'admin-id',
+            name: 'admin[id]',
+            value: target.id,
+            type: 'hidden',
+        },
+        email: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('email', form_error),
+            id: 'admin-email',
+            label: msg('5.2', 'Email'),
+            name: 'admin[email]',
+            value: form_input('admin.email', target.email),
+            type: 'text',
+        },
+        fullname: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('fullname', form_error),
+            id: 'admin-fullname',
+            label: msg('5.2', 'Fullname'),
+            name: 'admin[fullname]',
+            value: form_input('admin.fullname', target.fullname),
+            type: 'text',
+        }
+    }
+%}
+
+{% include 'library/form/detail.twig' with {
+    form_item : form_item
+} %}

@@ -1,0 +1,5 @@
+/.env
+/composer.lock
+/public/asset/*
+/public/media/*
+/vendor/

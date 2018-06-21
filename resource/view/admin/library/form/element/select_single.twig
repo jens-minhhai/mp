@@ -1,0 +1,28 @@
+<select id="{{ form_field.id }}"
+        class="form-control j-select_single {{ form_field.class }} {{ form_field.error ? 'is-invalid' : '' }}"
+        name="{{ form_field.name }}"
+
+        {% if form_field.attributes.readonly %}
+            disabled="disabled",
+        {% endif %}
+
+        {% for attribute_name, attribute_value in form_field.attributes %}
+            {{ attribute_name }}="{{ attribute_value }}"
+        {% endfor %}
+>
+    {% for value, text in form_field.option %}
+        <option value="{{ value }}"
+            {% if form_field.value == value %}
+                selected
+            {% endif %}
+        >
+            {{ text|raw }}
+        </option>
+    {% endfor %}
+</select>
+
+{% if form_field.error %}
+    <div class='invalid-feedback'>
+        {{ form_field.error }}
+    </div>
+{% endif %}

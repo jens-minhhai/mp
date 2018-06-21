@@ -1,0 +1,11 @@
+<div class="card {{ form_block.class|default('') }}">
+    <div class="card-header bg-light border border-top-0 border-right-0 border-left-0">
+        {{ form_block.title }}
+    </div>
+    <div class="card-body">
+        {% include form_block.file with {
+            form_error: form_block.error,
+            target: form_block.target
+        } %}
+    </div>
+</div>

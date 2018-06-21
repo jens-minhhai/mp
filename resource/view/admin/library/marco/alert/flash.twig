@@ -1,0 +1,8 @@
+{% macro show( name ) %}
+    {% if flash_check( name ) %}
+        {% import 'library/marco/alert/message.twig' as marco_notify %}
+
+        {% set option = flash_read( name ) %}
+        {{ marco_notify.show(option) }}
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,14 @@
+https://dev.to/aurelkurtula/setting-up-a-minimal-node-environment-with-webpack-and-babel--1j04
+https://www.robinwieruch.de/react-eslint-webpack-babel/
+
+npm install --save-dev webpack
+npm install --save-dev webpack-cli
+npm install --save-dev babel-loader
+npm install --save-dev babel-preset-env
+
+
+npm install --save-dev extract-text-webpack-plugin@next
+npm install --save-dev style-loader css-loader scss-loader node-scss expose-loader
+
+
+npm install --save bootstrap jquery popper.js whatwg-fetch 

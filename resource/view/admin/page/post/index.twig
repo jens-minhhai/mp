@@ -1,0 +1,58 @@
+{% extends 'layout/default.twig' %}
+{% import 'library/marco/alert/flash.twig' as marco_flash %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header border border-top-0 border-right-0 border-left-0">
+            {{ msg('7.1', 'Post') }}
+        </div>
+        <div class="card-body">
+            {{ marco_flash.show('message') }}
+
+            <form method='post' class='j-form' action='{{ url("#{base_url}/modify") }}'>
+                {{ form_crsf() }}
+
+                {% include 'component/common/table/option.twig' with {
+                    option : form.master.mode,
+                    base_url: base_url,
+                    name: 'post[option]'
+                }%}
+
+                <table class="j-data_table table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class='text-center'>
+                                <label class="checkbox--container">
+                                    <input class='j-checkAll' type='checkbox' data-target='j-checkItem'/>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </th>
+                            <th>{{ msg('7.4', 'Mode') }}</th>
+                            <th>{{ msg('7.3', 'Category') }}</th>
+                            <th class='w-75'>{{ msg('7.2', 'Title') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                <td class='text-center'>
+                                    <label class="checkbox--container">
+                                        <input class='j-checkItem' type='checkbox' name='post[id][]' value='{{ item.id }}'/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>{{ mode(item.mode, 'post.master.mode') }}</td>
+                                <td>{{ item.category.title }}</td>
+                                <td>
+                                    <a href='{{ url("#{base_url}/#{item.id}/edit") }}' title='{{ item.title }}'>
+                                        {{ item.title }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock %}

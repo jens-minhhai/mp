@@ -1,0 +1,1287 @@
+[2018-03-04 05:59:22] STREAM_LOG.DEBUG: Array
+(
+    [0] => Array
+        (
+            [query] => TRUNCATE mp_app
+            [affected] => 0
+            [time] => 0.23964
+        )
+
+    [1] => Array
+        (
+            [query] => TRUNCATE mp_app_domain
+            [affected] => 0
+            [time] => 0.53502
+        )
+
+    [2] => Array
+        (
+            [query] => TRUNCATE mp_account
+            [affected] => 0
+            [time] => 0.21227
+        )
+
+    [3] => Array
+        (
+            [query] => TRUNCATE mp_group
+            [affected] => 0
+            [time] => 0.25673
+        )
+
+    [4] => Array
+        (
+            [query] => TRUNCATE mp_auth
+            [affected] => 0
+            [time] => 0.25669
+        )
+
+    [5] => Array
+        (
+            [query] => TRUNCATE mp_seo
+            [affected] => 0
+            [time] => 2.41919
+        )
+
+    [6] => Array
+        (
+            [query] => TRUNCATE mp_config
+            [affected] => 0
+            [time] => 0.23452
+        )
+
+    [7] => Array
+        (
+            [query] => TRUNCATE mp_message
+            [affected] => 0
+            [time] => 0.22343
+        )
+
+    [8] => Array
+        (
+            [query] => TRUNCATE mp_category
+            [affected] => 0
+            [time] => 0.22337
+        )
+
+    [9] => Array
+        (
+            [query] => TRUNCATE mp_code
+            [affected] => 0
+            [time] => 0.25673
+        )
+
+    [10] => Array
+        (
+            [query] => INSERT INTO mp_app (`id`, `title`, `token`, `creator`) VALUES (1, 'yunhaihuang@gmail.com', '37a72930c1bdae00a8bc74693cd564f1498f7a2d', 2)
+            [affected] => 1
+            [time] => 0.05529
+        )
+
+    [11] => Array
+        (
+            [query] => INSERT INTO mp_app_domain (`domain`, `creator`, `app_id`) VALUES ('http://master.mp.me', 2, 1)
+            [affected] => 1
+            [time] => 0.05504
+        )
+
+    [12] => Array
+        (
+            [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (101, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+            [affected] => 1
+            [time] => 0.0553
+        )
+
+    [13] => Array
+        (
+            [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (101, 'Master', 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05507
+        )
+
+    [14] => Array
+        (
+            [query] => INSERT INTO mp_auth (`account`, `account_id`, `group_id`, `password`, `creator`, `app_id`) VALUES ('master', 101, 101, '$2y$11$RD.6glVf9z2aw3I25pp2WOGwU5baKRoNXztkaj6KE02VvvknKU3MG', 2, 1)
+            [affected] => 1
+            [time] => 0.04752
+        )
+
+    [15] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('login', 'auth.auth/login', '', 'Login', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05468
+        )
+
+    [16] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('logout', 'auth.auth/logout', '', 'Logout', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05516
+        )
+
+    [17] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('token', 'auth.token/get', '', '', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.11126
+        )
+
+    [18] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/root/:action#@!null@default|index', 'category.root/:action', '', 'Category', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.11163
+        )
+
+    [19] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/root/:id/edit', 'category.root/edit/:id', '', 'Category', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [20] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:root/:action#@!null@default|index', 'category.index/:action/:root', '', 'Category', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [21] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:root/:id/edit', 'category.index/edit/:root/:id', '', 'Category', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05539
+        )
+
+    [22] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/root/:action#@!null@default|index', 'menu.root/:action', '', 'Menu', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05572
+        )
+
+    [23] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/root/:id/edit', 'menu.root/edit/:id', '', 'Menu', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [24] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:root/:id/edit', 'menu.index/edit/:root/:id', '', 'Menu', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05554
+        )
+
+    [25] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:root/:action#@!null@default|index', 'menu.index/:action/:root', '', 'Menu', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05544
+        )
+
+    [26] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:id/edit', 'config/edit/:id', '', 'Config', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05561
+        )
+
+    [27] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:action#@!null@default|index', 'config/:action', '', 'Config', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05558
+        )
+
+    [28] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:id/edit', 'message/edit/:id', '', 'Message', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05576
+        )
+
+    [29] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:action#@!null@default|index', 'message/:action', '', 'Message', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [30] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:id/edit', 'post/edit/:id', '', 'Post', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05542
+        )
+
+    [31] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:action#@!null@default|index', 'post/:action', '', 'Post', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05574
+        )
+
+    [32] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:id/edit', 'group/edit/:id', '', 'Group', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05566
+        )
+
+    [33] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:action#@!null@default|index', 'group/:action', '', 'Group', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05549
+        )
+
+    [34] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/post', '', '', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05548
+        )
+
+    [35] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:id/edit', 'account.admin/edit/:id/channel:admin', '', 'Account', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0556
+        )
+
+    [36] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:action#@!null@default|index', 'account.admin/:action/channel:admin', '', 'Account', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05559
+        )
+
+    [37] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('file/upload', 'file/upload', '', '', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05549
+        )
+
+    [38] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/:action#@!null@default|index', 'auth.index/:action/channel:admin', '', 'Auth', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05557
+        )
+
+    [39] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/:id/edit', 'auth.index/edit/:id', '', 'Auth', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05552
+        )
+
+    [40] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('builder/app', 'builder.app/app', '', 'Builder', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [41] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('login', 'auth.auth/login', '', 'Login', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0556
+        )
+
+    [42] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('logout', 'auth.auth/logout', '', 'Login', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05728
+        )
+
+    [43] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('token', 'auth.token/get', '', '', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04442
+        )
+
+    [44] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:action#@!null@default|index', 'category.root/:action', '', 'Category', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04445
+        )
+
+    [45] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:id/edit', 'category.root/edit/:id', '', 'Category', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04456
+        )
+
+    [46] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:action#@!null@default|index', 'category.index/:action/:root', '', 'Category', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04457
+        )
+
+    [47] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:id/edit', 'category.index/edit/:root/:id', '', 'Category', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04435
+        )
+
+    [48] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:action#@!null@default|index', 'menu.root/:action', '', 'Menu', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04458
+        )
+
+    [49] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:id/edit', 'menu.root/edit/:id', '', 'Menu', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04443
+        )
+
+    [50] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:id/edit', 'menu.index/edit/:root/:id', '', 'Menu', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04429
+        )
+
+    [51] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:action#@!null@default|index', 'menu.index/:action/:root', '', 'Menu', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04454
+        )
+
+    [52] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:channel#@is|admin@default|public/:id/edit', 'config/edit/:id', '', 'Config', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04449
+        )
+
+    [53] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:channel#@is|admin@default|public/:action#@!null@default|index', 'config/:action', '', 'Config', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04445
+        )
+
+    [54] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:channel#@is|admin@default|public/:id/edit', 'message/edit/:id', '', 'Message', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04442
+        )
+
+    [55] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:channel#@is|admin@default|public/:action#@!null@default|index', 'message/:action', '', 'Message', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0444
+        )
+
+    [56] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:id/edit', 'post/edit/:id', '', 'Post', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04436
+        )
+
+    [57] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:action#@!null@default|index', 'post/:action', '', 'Post', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04433
+        )
+
+    [58] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:channel#@is|admin@default|public/:id/edit', 'group/edit/:id', '', 'Group', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04438
+        )
+
+    [59] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:channel#@is|admin@default|public/:action#@!null@default|index', 'group/:action', '', 'Group', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04452
+        )
+
+    [60] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/post', '', '', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04439
+        )
+
+    [61] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:id/edit', 'account.admin/edit/:id/channel:admin', '', 'Account', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04441
+        )
+
+    [62] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:action#@!null@default|index', 'account.admin/:action/channel:admin', '', 'Account', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [63] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('file/upload', 'file/upload', '', '', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04441
+        )
+
+    [64] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/admin/:action#@!null@default|index', 'auth.admin/:action/channel:admin', '', 'Auth', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04458
+        )
+
+    [65] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/admin/:id/edit', 'auth.admin/edit/:id/channel:admin', '', 'Auth', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0444
+        )
+
+    [66] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/home', '', '', '', '', 10, 1, 2, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04445
+        )
+
+    [67] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.04404
+        )
+
+    [68] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.04451
+        )
+
+    [69] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.04439
+        )
+
+    [70] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04452
+        )
+
+    [71] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04434
+        )
+
+    [72] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04448
+        )
+
+    [73] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.04457
+        )
+
+    [74] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.04441
+        )
+
+    [75] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.04459
+        )
+
+    [76] => Array
+        (
+            [query] => INSERT INTO mp_category (`title`, `parent_id`, `left`, `right`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('Post', 0, 1, 2, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05507
+        )
+
+    [77] => Array
+        (
+            [query] => UPDATE mp_category SET `tree_id` = '1' WHERE `deleted_by` = 0
+            [affected] => 1
+            [time] => 0.05546
+        )
+
+    [78] => Array
+        (
+            [query] => INSERT INTO mp_code (`code`, `target_model`, `channel_id`, `locale_id`, `creator`, `app_id`, `target_id`) VALUES ('post', 2, 1, 1, 2, 1, 1)
+            [affected] => 1
+            [time] => 0.05573
+        )
+
+)
+  
+[2018-03-04 06:34:38] STREAM_LOG.ERROR: Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '102' for key 'PRIMARY'
+    [3] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (102, 'Master', 2, 1, 2, 1)
+    [4] => Array
+        (
+            [0] => Array
+                (
+                    [query] => TRUNCATE mp_app
+                    [affected] => 0
+                    [time] => 0.25885
+                )
+
+            [1] => Array
+                (
+                    [query] => TRUNCATE mp_app_domain
+                    [affected] => 0
+                    [time] => 0.26773
+                )
+
+            [2] => Array
+                (
+                    [query] => TRUNCATE mp_account
+                    [affected] => 0
+                    [time] => 0.24558
+                )
+
+            [3] => Array
+                (
+                    [query] => TRUNCATE mp_group
+                    [affected] => 0
+                    [time] => 0.24556
+                )
+
+            [4] => Array
+                (
+                    [query] => TRUNCATE mp_auth
+                    [affected] => 0
+                    [time] => 0.2456
+                )
+
+            [5] => Array
+                (
+                    [query] => TRUNCATE mp_seo
+                    [affected] => 0
+                    [time] => 2.28525
+                )
+
+            [6] => Array
+                (
+                    [query] => TRUNCATE mp_config
+                    [affected] => 0
+                    [time] => 0.25665
+                )
+
+            [7] => Array
+                (
+                    [query] => TRUNCATE mp_message
+                    [affected] => 0
+                    [time] => 0.25665
+                )
+
+            [8] => Array
+                (
+                    [query] => TRUNCATE mp_category
+                    [affected] => 0
+                    [time] => 0.22335
+                )
+
+            [9] => Array
+                (
+                    [query] => TRUNCATE mp_code
+                    [affected] => 0
+                    [time] => 0.20109
+                )
+
+            [10] => Array
+                (
+                    [query] => INSERT INTO mp_app (`id`, `title`, `token`, `creator`) VALUES (1, 'yunhaihuang@gmail.com', '2d8789dd23bf607c8729737d02e64499c98bafee', 2)
+                    [affected] => 1
+                    [time] => 0.04411
+                )
+
+            [11] => Array
+                (
+                    [query] => INSERT INTO mp_app_domain (`domain`, `creator`, `app_id`) VALUES ('http://master.mp.me', 2, 1)
+                    [affected] => 1
+                    [time] => 0.04387
+                )
+
+            [12] => Array
+                (
+                    [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (101, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+                    [affected] => 1
+                    [time] => 0.04376
+                )
+
+            [13] => Array
+                (
+                    [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (102, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+                    [affected] => 1
+                    [time] => 0.04428
+                )
+
+            [14] => Array
+                (
+                    [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (103, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+                    [affected] => 1
+                    [time] => 0.0891
+                )
+
+            [15] => Array
+                (
+                    [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (101, 'Master', 3, 1, 2, 1)
+                    [affected] => 1
+                    [time] => 0.08908
+                )
+
+            [16] => Array
+                (
+                    [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (102, 'Master', 1, 1, 2, 1)
+                    [affected] => 1
+                    [time] => 0.0442
+                )
+
+        )
+
+)
+  
+[2018-03-04 06:36:14] STREAM_LOG.DEBUG: Array
+(
+    [0] => Array
+        (
+            [query] => TRUNCATE mp_app
+            [affected] => 0
+            [time] => 0.21644
+        )
+
+    [1] => Array
+        (
+            [query] => TRUNCATE mp_app_domain
+            [affected] => 0
+            [time] => 0.22329
+        )
+
+    [2] => Array
+        (
+            [query] => TRUNCATE mp_account
+            [affected] => 0
+            [time] => 0.24553
+        )
+
+    [3] => Array
+        (
+            [query] => TRUNCATE mp_group
+            [affected] => 0
+            [time] => 0.24558
+        )
+
+    [4] => Array
+        (
+            [query] => TRUNCATE mp_auth
+            [affected] => 0
+            [time] => 0.34576
+        )
+
+    [5] => Array
+        (
+            [query] => TRUNCATE mp_seo
+            [affected] => 0
+            [time] => 3.49922
+        )
+
+    [6] => Array
+        (
+            [query] => TRUNCATE mp_config
+            [affected] => 0
+            [time] => 0.21223
+        )
+
+    [7] => Array
+        (
+            [query] => TRUNCATE mp_message
+            [affected] => 0
+            [time] => 0.29572
+        )
+
+    [8] => Array
+        (
+            [query] => TRUNCATE mp_category
+            [affected] => 0
+            [time] => 0.35112
+        )
+
+    [9] => Array
+        (
+            [query] => TRUNCATE mp_code
+            [affected] => 0
+            [time] => 0.23444
+        )
+
+    [10] => Array
+        (
+            [query] => INSERT INTO mp_app (`id`, `title`, `token`, `creator`) VALUES (1, 'yunhaihuang@gmail.com', '6b674094cf65925ba90f7363fa33c4e8beb51db6', 2)
+            [affected] => 1
+            [time] => 0.05525
+        )
+
+    [11] => Array
+        (
+            [query] => INSERT INTO mp_app_domain (`domain`, `creator`, `app_id`) VALUES ('http://master.mp.me', 2, 1)
+            [affected] => 1
+            [time] => 0.055
+        )
+
+    [12] => Array
+        (
+            [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (101, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+            [affected] => 1
+            [time] => 0.05487
+        )
+
+    [13] => Array
+        (
+            [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (102, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+            [affected] => 1
+            [time] => 0.05542
+        )
+
+    [14] => Array
+        (
+            [query] => INSERT INTO mp_account (`id`, `email`, `fullname`, `creator`, `app_id`) VALUES (103, 'yunhaihuang@gmail.com', 'Hai Truong', 2, 1)
+            [affected] => 1
+            [time] => 0.11132
+        )
+
+    [15] => Array
+        (
+            [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (101, 'Master', 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.1112
+        )
+
+    [16] => Array
+        (
+            [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (102, 'Master', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05535
+        )
+
+    [17] => Array
+        (
+            [query] => INSERT INTO mp_group (`id`, `title`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES (103, 'Master', 2, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.1113
+        )
+
+    [18] => Array
+        (
+            [query] => INSERT INTO mp_auth (`account`, `account_id`, `group_id`, `password`, `creator`, `app_id`) VALUES ('master', 101, 101, '$2y$11$pC9VGbkdyjsu4eJnuHKOOO05q3JSxN9T5tiUsnAvawI1C6LBYJtQ2', 2, 1)
+            [affected] => 1
+            [time] => 0.05213
+        )
+
+    [19] => Array
+        (
+            [query] => INSERT INTO mp_auth (`account`, `account_id`, `group_id`, `password`, `creator`, `app_id`) VALUES ('admin', 102, 102, '$2y$11$22UcDU8Sc.rrO/cwEL0cp.KGKT9R/noMIGpcbUslMgjiz0qOt3Ul2', 2, 1)
+            [affected] => 1
+            [time] => 0.05549
+        )
+
+    [20] => Array
+        (
+            [query] => INSERT INTO mp_auth (`account`, `account_id`, `group_id`, `password`, `creator`, `app_id`) VALUES ('user', 103, 103, '$2y$11$fTIV.Lkgg7qBb6nwZQOkJeEgq97Iy0nWtDpRig2Vq2EDA/wiicNO2', 2, 1)
+            [affected] => 1
+            [time] => 0.11124
+        )
+
+    [21] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('login', 'auth.auth/login', '', 'Login', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.11091
+        )
+
+    [22] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('logout', 'auth.auth/logout', '', 'Logout', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04438
+        )
+
+    [23] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('token', 'auth.token/get', '', '', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.08904
+        )
+
+    [24] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/root/:action#@!null@default|index', 'category.root/:action', '', 'Category', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.10037
+        )
+
+    [25] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/root/:id/edit', 'category.root/edit/:id', '', 'Category', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05548
+        )
+
+    [26] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:root/:action#@!null@default|index', 'category.index/:action/:root', '', 'Category', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04461
+        )
+
+    [27] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:root/:id/edit', 'category.index/edit/:root/:id', '', 'Category', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04439
+        )
+
+    [28] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/root/:action#@!null@default|index', 'menu.root/:action', '', 'Menu', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04609
+        )
+
+    [29] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/root/:id/edit', 'menu.root/edit/:id', '', 'Menu', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04445
+        )
+
+    [30] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:root/:id/edit', 'menu.index/edit/:root/:id', '', 'Menu', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04445
+        )
+
+    [31] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:root/:action#@!null@default|index', 'menu.index/:action/:root', '', 'Menu', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [32] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:id/edit', 'config/edit/:id', '', 'Config', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04437
+        )
+
+    [33] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:action#@!null@default|index', 'config/:action', '', 'Config', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04448
+        )
+
+    [34] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:id/edit', 'message/edit/:id', '', 'Message', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [35] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:action#@!null@default|index', 'message/:action', '', 'Message', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04444
+        )
+
+    [36] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:id/edit', 'post/edit/:id', '', 'Post', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04436
+        )
+
+    [37] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:action#@!null@default|index', 'post/:action', '', 'Post', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04448
+        )
+
+    [38] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:id/edit', 'group/edit/:id', '', 'Group', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04442
+        )
+
+    [39] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:action#@!null@default|index', 'group/:action', '', 'Group', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04438
+        )
+
+    [40] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/post', '', '', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0445
+        )
+
+    [41] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:id/edit', 'account.admin/edit/:id/channel:admin', '', 'Account', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [42] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:action#@!null@default|index', 'account.admin/:action/channel:admin', '', 'Account', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04439
+        )
+
+    [43] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('file/upload', 'file/upload', '', '', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [44] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/:action#@!null@default|index', 'auth.index/:action/channel:admin', '', 'Auth', '', '', 20, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04463
+        )
+
+    [45] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/:id/edit', 'auth.index/edit/:id', '', 'Auth', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04449
+        )
+
+    [46] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('builder/app', 'builder.app/app', '', 'Builder', '', '', 10, 1, 3, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04432
+        )
+
+    [47] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('login', 'auth.auth/login', '', 'Login', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05554
+        )
+
+    [48] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('logout', 'auth.auth/logout', '', 'Login', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04449
+        )
+
+    [49] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('token', 'auth.token/get', '', '', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0444
+        )
+
+    [50] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:action#@!null@default|index', 'category.root/:action', '', 'Category', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.04446
+        )
+
+    [51] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:id/edit', 'category.root/edit/:id', '', 'Category', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05554
+        )
+
+    [52] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:action#@!null@default|index', 'category.index/:action/:root', '', 'Category', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [53] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('category/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:id/edit', 'category.index/edit/:root/:id', '', 'Category', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [54] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:action#@!null@default|index', 'menu.root/:action', '', 'Menu', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [55] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/root/:id/edit', 'menu.root/edit/:id', '', 'Menu', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0556
+        )
+
+    [56] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:id/edit', 'menu.index/edit/:root/:id', '', 'Menu', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05545
+        )
+
+    [57] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('menu/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:root/:action#@!null@default|index', 'menu.index/:action/:root', '', 'Menu', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05544
+        )
+
+    [58] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:channel#@is|admin@default|public/:id/edit', 'config/edit/:id', '', 'Config', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05552
+        )
+
+    [59] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('config/:channel#@is|admin@default|public/:action#@!null@default|index', 'config/:action', '', 'Config', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0558
+        )
+
+    [60] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:channel#@is|admin@default|public/:id/edit', 'message/edit/:id', '', 'Message', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05556
+        )
+
+    [61] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('message/:channel#@is|admin@default|public/:action#@!null@default|index', 'message/:action', '', 'Message', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0555
+        )
+
+    [62] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:id/edit', 'post/edit/:id', '', 'Post', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05567
+        )
+
+    [63] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('post/:channel#@is|admin@default|public/:locale#@in|en@default|vi/:action#@!null@default|index', 'post/:action', '', 'Post', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [64] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:channel#@is|admin@default|public/:id/edit', 'group/edit/:id', '', 'Group', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05557
+        )
+
+    [65] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('group/:channel#@is|admin@default|public/:action#@!null@default|index', 'group/:action', '', 'Group', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0554
+        )
+
+    [66] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/post', '', '', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05556
+        )
+
+    [67] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:id/edit', 'account.admin/edit/:id/channel:admin', '', 'Account', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05552
+        )
+
+    [68] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('account/admin/:action#@!null@default|index', 'account.admin/:action/channel:admin', '', 'Account', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05571
+        )
+
+    [69] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('file/upload', 'file/upload', '', '', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.0555
+        )
+
+    [70] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/admin/:action#@!null@default|index', 'auth.admin/:action/channel:admin', '', 'Auth', '', '', 20, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05556
+        )
+
+    [71] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('auth/admin/:id/edit', 'auth.admin/edit/:id/channel:admin', '', 'Auth', '', '', 10, 1, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05553
+        )
+
+    [72] => Array
+        (
+            [query] => INSERT INTO mp_seo (`alias`, `url`, `canonical`, `title`, `keyword`, `description`, `priority`, `mode`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('', '/home', '', '', '', '', 10, 1, 2, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05551
+        )
+
+    [73] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.05489
+        )
+
+    [74] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.05546
+        )
+
+    [75] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 3, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [76] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05556
+        )
+
+    [77] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05558
+        )
+
+    [78] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05562
+        )
+
+    [79] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.app', 'http://master.mp.me', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.05555
+        )
+
+    [80] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.asset', 'http://master.mp.me/asset', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.0557
+        )
+
+    [81] => Array
+        (
+            [query] => INSERT INTO mp_config (`code`, `value`, `mode`, `channel_id`, `creator`, `app_id`) VALUES ('app.host.media', 'http://master.mp.me/media', 1, 2, 2, 1)
+            [affected] => 1
+            [time] => 0.05565
+        )
+
+    [82] => Array
+        (
+            [query] => INSERT INTO mp_category (`title`, `parent_id`, `left`, `right`, `channel_id`, `locale_id`, `creator`, `app_id`) VALUES ('Post', 0, 1, 2, 1, 1, 2, 1)
+            [affected] => 1
+            [time] => 0.05426
+        )
+
+    [83] => Array
+        (
+            [query] => UPDATE mp_category SET `tree_id` = '1' WHERE `deleted_by` = 0
+            [affected] => 1
+            [time] => 0.05542
+        )
+
+    [84] => Array
+        (
+            [query] => INSERT INTO mp_code (`code`, `target_model`, `channel_id`, `locale_id`, `creator`, `app_id`, `target_id`) VALUES ('post', 2, 1, 1, 2, 1, 1)
+            [affected] => 1
+            [time] => 0.05538
+        )
+
+)
+  

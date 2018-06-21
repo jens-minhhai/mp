@@ -1,0 +1,51 @@
+{% set form_item = {
+        account: {
+            attributes: {
+                type: 'text',
+            },
+            error: error('account', form_error),
+            id: 'admin-account',
+            label: msg('5.4', 'Account'),
+            name: 'admin[account]',
+            value: form_input('admin.account', target.account),
+            type: 'text',
+        },
+        password: {
+            attributes: {
+                type: 'password'
+            },
+            error: error('password', form_error),
+            id: 'admin-password',
+            label: msg('5.5', 'Password'),
+            name: 'admin[password]',
+            value: form_input('admin.password', target.password),
+            type: 'text',
+        },
+        group: {
+            attributes: {
+            },
+            error: error('group_id', form_error),
+            id: 'admin-group',
+            label: msg('5.6', 'Group'),
+            name: 'admin[group_id]',
+            option: form.group,
+            value: form_input('admin.group_id', target.group_id),
+            type: 'select_single',
+        },
+        mode: {
+            attributes: {
+            },
+            error: error('mode', form_error),
+            id: 'admin-mode',
+            label: msg('5.4', 'Mode'),
+            name: 'admin[mode]',
+            option: form.master.mode,
+            value: form_input('admin.mode', target.mode),
+            type: 'select_single',
+        }
+    }
+%}
+
+{% include 'library/form/detail.twig' with {
+    form_item : form_item
+} %}

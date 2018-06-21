@@ -1,0 +1,46 @@
+{% extends 'layout/login.twig' %}
+{% import 'library/marco/alert/error.twig' as marco_error %}
+
+{% block content %}
+    {% set view_form = {
+            error: attribute(error, 'auth')|default({}),
+            file: 'page/auth/login/form/login.twig',
+            option: {
+                id: 'basic-form'
+            },
+            target: target,
+        }
+    %}
+
+    <form method='post'>
+        {{ form_crsf() }}
+        <div class="card p-4">
+            <div class="card-header text-center text-uppercase h4 font-weight-light">
+                Login
+            </div>
+
+            <div class="card-body py-5">
+                {% if notification %}
+                    {{ marco_error.show(msg('99.1', 'Account / Password does not match')) }}
+                {% endif %}
+
+                {% include view_form.file with {
+                    form_error: view_form.error,
+                    target: view_form.target
+                } %}
+            </div>
+
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary px-5">Login</button>
+                    </div>
+
+                    <div class="col-6">
+                        <a href="#" class="btn btn-link">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

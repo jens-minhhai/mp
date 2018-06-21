@@ -1,0 +1,61 @@
+{% set form_item = {
+    id: {
+        attributes: {},
+        id: 'seo.id',
+        name: 'seo[id]',
+        value: target.id,
+        type: 'hidden'
+    },
+    permalink: {
+        attributes: {
+            type: 'text'
+        },
+        error: error( 'alias', form_error ),
+        label: msg( '2.1', 'Permalink' ),
+        name: 'seo[alias]',
+        value: form_input( 'seo.alias', target.alias ),
+        type: 'text'
+    },
+    canonical: {
+        attributes: {
+            type: 'text'
+        },
+        error: error( 'canonical', form_error ),
+        label: msg( '2.2', 'Canonical' ),
+        name: 'seo[canonical]',
+        value: form_input( 'seo.canonical', target.canonical ),
+        type: 'text'
+    },
+    title: {
+        attributes: {
+            type: 'text'
+        },
+        error: error( 'title', form_error ),
+        label: msg( '2.3', 'Title' ),
+        name: 'seo[title]',
+        value: form_input( 'seo.title', target.title ),
+        type: 'text'
+    },
+    keyword: {
+        attributes: {
+            type: 'text'
+        },
+        error: error( 'keyword', form_error ),
+        label: msg( '2.4', 'Keyword' ),
+        name: 'seo[keyword]',
+        value: form_input( 'seo.keyword', target.keyword ),
+        type: 'text'
+    },
+    description: {
+        attributes: {},
+        error: error( 'description', form_error ),
+        label: msg( '2.5', 'Description' ),
+        name: 'seo[description]',
+        value: form_input( 'seo.description', target.description ),
+        type: 'textarea'
+    }
+} %}
+
+{% include 'library/form/detail.twig' with {
+    form_item : form_item
+} %}

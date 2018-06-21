@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+
+<?php
+
+define('ROOT', dirname(__FILE__));
+define('BIN', ROOT . '/bin');
+
+require ROOT. '/bootstrap/kernel.terminal.php';
+
+define('ENV', BIN . '/env/' . env('APP_ENV'));
+
+load('constant.php', ENV);
+
+$app = new Slim\App(['settings' => load('app.php', ENV)]);
+
+require ENV . '/container.php';
+require BIN . '/bootstrap/route.php';
+
+$app->run(true);

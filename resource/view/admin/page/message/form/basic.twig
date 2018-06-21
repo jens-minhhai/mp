@@ -1,0 +1,47 @@
+{% set form_item = {
+        id: {
+            attributes: {},
+            id: 'message-id',
+            name: 'message[id]',
+            value: target.id,
+            type: 'hidden',
+        },
+        code: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('code', form_error),
+            id: 'message-code',
+            label: msg('8.2', 'Code'),
+            name: 'message[code]',
+            value: form_input('message.code', target.code),
+            type: 'text',
+        },
+        value: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('value', form_error),
+            id: 'message-value',
+            label: msg('8.3', 'Value'),
+            name: 'message[value]',
+            value: form_input('message.value', target.value),
+            type: 'text',
+        },
+        mode: {
+            attributes: {
+            },
+            error: error('mode', form_error),
+            id: 'message-mode',
+            label: msg('8.4', 'Mode'),
+            name: 'message[mode]',
+            option: form.master.mode,
+            value: form_input('message.mode', target.mode),
+            type: 'select_single',
+        }
+    }
+%}
+
+{% include 'library/form/detail.twig' with {
+    form_item : form_item
+} %}

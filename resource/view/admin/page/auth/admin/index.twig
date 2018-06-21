@@ -1,0 +1,61 @@
+{% extends 'layout/default.twig' %}
+{% import 'library/marco/alert/flash.twig' as marco_flash %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header border border-top-0 border-right-0 border-left-0">
+            {{ msg('5.1', 'Admin') }}
+        </div>
+        <div class="card-body">
+            {{ marco_flash.show('message') }}
+
+            <form method='post' class='j-form' action='{{ url("#{base_url}/modify") }}'>
+                {{ form_crsf() }}
+
+                {% include 'component/common/table/option.twig' with {
+                    option : form.master.mode,
+                    base_url: base_url,
+                    name: 'admin[option]'
+                } %}
+                <table class="j-data_table table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class='text-center'>
+                                <label class="checkbox--container">
+                                    <input class='j-checkAll' type='checkbox' data-target='j-checkItem'/>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </th>
+                            <th>{{ msg('5.7', 'Mode') }}</th>
+                            <th>{{ msg('5.8', 'Account') }}</th>
+                            <th>{{ msg('5.6', 'Group') }}</th>
+                            <th>{{ msg('5.9', 'Fullname') }}</th>
+                            <th>{{ msg('5.9', 'Email') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                <td class='text-center'>
+                                    <label class="checkbox--container">
+                                        <input class='j-checkItem' type='checkbox' name='admin[id][]' value='{{ item.id }}'/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>{{ mode(item.mode, 'auth.admin.master.mode') }}</td>
+                                <td>
+                                    <a href='{{ url("#{base_url}/#{item.id}/edit") }}' title='{{ item.name }}'>
+                                        {{ item.account }}
+                                    </a>
+                                </td>
+                                <td>{{ item.group }}</td>
+                                <td>{{ item.fullname }}</td>
+                                <td>{{ item.email }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% set form_field = form_field | merge({
+    id: form_field.id ~ form_item.index,
+    class: form_field.class ~ ' j-' ~ form_field.mode
+}) %}
+
+{% if form_field.mode == 'copy' %}
+    {% if form_field.copy is empty %}
+        {% set form_field = form_field | merge( { value: null } ) %}
+    {% endif %}
+{% endif %}
+
+{% include 'library/form/element/' ~ form_field.type ~ '.twig' with {
+    form_field : form_field
+} %}

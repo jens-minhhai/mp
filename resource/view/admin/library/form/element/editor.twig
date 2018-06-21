@@ -1,0 +1,16 @@
+<textarea id="{{ form_field.id }}"
+          class="form-control j-editor {{ form_field.class }}"
+          name="{{ form_field.name }}"
+          rows="10"
+          {% for attribute_name, attribute_value in form_field.attributes %}
+              {{ attribute_name }}="{{ attribute_value }}"
+          {% endfor %}
+>
+    {{- form_field.value -}}
+</textarea>
+
+{% if form_field.error %}
+    <div class='invalid-feedback'>
+        {{ form_field.error }}
+    </div>
+{% endif %}

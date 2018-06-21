@@ -1,0 +1,15 @@
+{% if form_item.type == 'hidden' %}
+    {% include 'library/form/field.twig' with {
+        form_field : form_item
+    } %}
+{% else %}
+    <div class="form-group{% if form_item.require is defined %} required{% endif %}">
+        <label for="{{ form_item.name }}">{{ form_item.label }}</label>
+
+        <div class='input-container'>
+            {% include 'library/form/field.twig' with {
+                form_field : form_item
+            } %}
+        </div>
+    </div>
+{% endif %}

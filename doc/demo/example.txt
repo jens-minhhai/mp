@@ -1,0 +1,12 @@
+// Lazy
+$lazy = new Lazy();
+$criteria = [
+    'seo_id' => 'seo',
+    'file_id' => 'file'
+];
+$name = [
+    'seo_id' => 'data.{n}.p_seo',
+];
+Lazy::assign($option['data'], $criteria, $name);
+
+

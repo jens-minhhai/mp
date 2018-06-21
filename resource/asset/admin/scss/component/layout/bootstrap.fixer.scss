@@ -1,0 +1,22 @@
+select::-ms-expand {
+    display: none;
+}
+
+/* Firefox FIX! */
+select {
+    outline : none;
+    overflow : hidden;
+    appearance: none;
+    -moz-appearance: none;
+    text-indent : 0.01px;/* this is important! */
+    text-overflow: ''; /* this is important! */
+
+    &.custom-select{
+        -webkit-appearance: none;
+        width: auto;
+        padding-right: 20px;
+    }
+    option {
+        background: #fff;
+    }
+}

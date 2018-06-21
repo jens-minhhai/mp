@@ -1,0 +1,13 @@
+<div class="table--option">
+    <select class="custom-select" name='{{ name }}'>
+        <option value="0">{{ msg('1.2', 'Option') }}</option>
+        
+        {% for index, value in option %}
+        <option value="{{ index }}">{{ value }}</option>
+        {% endfor %}
+        <option value="{{ constant('DELETE') }}">{{ msg('1.5', 'Delete') }}</option>
+    </select>
+    <button class='btn btn-default'>{{ msg('1.6', 'Execute') }}</button>
+    <a href='{{ url("#{base_url}/create") }}' class="btn btn-primary">{{ msg('1.1', 'Add') }}</a>
+</div>
+<hr />

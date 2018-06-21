@@ -1,0 +1,38 @@
+{% extends 'layout/default.twig' %}
+
+{% block content %}
+    {% set view_form = {
+            attribute: {
+            },
+            blocks: {
+                basic: {
+                    class: '',
+                    error: attribute(error, 'category')|default({}),
+                    file: 'product/form/basic.twig',
+                    option: {
+                        id: 'basic-form'
+                    },
+                    target: target,
+                    title: 'Basic form'
+                },
+                seo: {
+                    file: 'element/form/partial/seo.twig',
+                    error: attribute(error, 'seo')|default({}),
+                    option: {
+                        id: 'seo-form'
+                    },
+                    target: target.seo,
+                    title: 'Seo form',
+                }
+            },
+            panel: {
+                file: 'component/common/form/panel.twig',
+                option: {
+                    back_url: '/admin/product'
+                }
+            },
+        }
+    %}
+
+    {% include 'library/form/builder.twig' with { view_form: view_form } %}
+{% endblock %}

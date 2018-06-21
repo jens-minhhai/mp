@@ -1,0 +1,25 @@
+<div class='radio-group'>
+    {% set value = form_field.value ?? form_field.default %}
+    {% for key, item in form_field.option %}
+    <div class="radio">
+        <label>
+            <input type="radio"
+                   name="{{ form_field.name }}"
+                   id="{{ form_field.id }}-{{key}}"
+                   value="{{ key }}"
+                   class='j-radio j-icheck {{ form_field.class }}'
+                   {% if key == value %}
+                      checked='checked'
+                   {% endif %}
+                   />
+            {{ item }}
+        </label>
+    </div>
+    {% endfor %}
+</div>
+
+{% if form_field.error %}
+    <div class='invalid-feedback'>
+        {{ form_field.error }}
+    </div>
+{% endif %}

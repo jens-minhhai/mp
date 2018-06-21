@@ -1,0 +1,31 @@
+{% set form_item = {
+        account: {
+            attributes: {
+                type: 'text'
+            },
+            error: error('account', form_error),
+            id: 'auth-account',
+            label: msg('8.2', 'Account'),
+            name: 'auth[account]',
+            value: form_input('auth.account', target.code),
+            value: '',
+            type: 'text',
+        },
+        password: {
+            attributes: {
+                type: 'password'
+            },
+            error: error('password', form_error),
+            id: 'auth-password',
+            label: msg('8.3', 'Password'),
+            name: 'auth[password]',
+            value: form_input('auth.password', target.value),
+            value: '',
+            type: 'text',
+        },
+    }
+%}
+
+{% include 'library/form/detail.twig' with {
+    form_item : form_item
+} %}

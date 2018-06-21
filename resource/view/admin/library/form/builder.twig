@@ -1,0 +1,17 @@
+<form method="post" {% for key, value in view_form.attribute|default({}) %} {{ key }}="{{ value }}" {% endfor %}>
+    {{ form_crsf() }}
+
+    <div class="{{ view_form.layout.class }}">
+        {% for form_block in view_form.blocks %}
+            {% include 'library/form/block.twig' with {
+                form_block : form_block
+            } %}
+        {% endfor %}
+
+        {% if view_form.panel %}
+            {% include view_form.panel.file with {
+                form_panel: view_form.panel.option
+            } %}
+        {% endif %}
+    </div>
+</form>

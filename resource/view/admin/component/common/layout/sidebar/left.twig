@@ -1,0 +1,32 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            {% for item in addon.sidebar %}
+                <li class="nav-item nav-dropdown">
+                    {% if item.children is defined %}
+                        <a href="#" class="nav-link nav-dropdown-toggle" title="{{ item.caption }}">
+                            {{ item.title }}
+                            <i class="icon icon-arrow-left"></i>
+                        </a>
+
+                        <ul class="nav-dropdown-items">
+                            {% for child in item.children %}
+                                <li class="nav-item">
+                                    <a href="{{ url(child.url) }}" class="nav-link" title="{{ child.caption }}">
+                                        {{ child.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                    <li >
+                        <a href="{{ url(item.url) }}" class="nav-link" title="{{ item.caption }}">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+</div>
