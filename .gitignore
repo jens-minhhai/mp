@@ -3,3 +3,4 @@
 /public/asset/*
 /public/media/*
 /vendor/
+/node_modules/

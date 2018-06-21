@@ -27,7 +27,6 @@ export default class Dropzone {
     }
 
     static getMaxUpload($target) {
-        return 1;
         const max = $target.data('max_upload');
         if (max) {
             return max;
@@ -43,7 +42,6 @@ export default class Dropzone {
         if (notify) {
             let msg = '';
             if (reached) {
-                // msg = 'Reached maximum upload.';
                 msg = $.i18n('maximum_upload');
             }
             $parent.find('.j-dropzone--feedback').html(msg);
