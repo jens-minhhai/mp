@@ -16,7 +16,7 @@
 
 .dropzone__dragover {
     @include dropzone_hover;
-    
+
     .dropzone--placeholder {
         @include dropzone_hover;
     }
@@ -72,4 +72,11 @@
     color: #fff;
     font-size: 14px;
     padding: 5px;
+}
+
+.dropzone--feedback {
+    padding: 5px;
+    color: white;
+    background-color: #dd6360;
+    border-color: #d9534f;
 }

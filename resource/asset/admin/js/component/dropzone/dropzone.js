@@ -1,5 +1,6 @@
-import request from '../common/request';
-import basic from '../common/basic';
+import Request from '../common/request';
+import Basic from '../common/basic';
+import App from '../common/app';
 
 export default class Dropzone {
     constructor($element) {
@@ -20,7 +21,7 @@ export default class Dropzone {
                     title: obj.title
                 };
 
-                const html = basic.parse(tpl, data);
+                const html = Basic.parse(tpl, data);
                 $container.append(html);
             });
         };
@@ -31,31 +32,26 @@ export default class Dropzone {
         if (max) {
             return max;
         }
-        return $target.attr('multiple') ? 10 : 1;
+        return $target.attr('multiple') ? App.env('max_upload_file') : 1;
     }
 
-    static reachLimitUpload($target, maxUpload, notify = true) {
+    static reachLimitUpload($target, maxUpload) {
         const $parent = $target.parent();
         const currentUpload = $parent.find('.dropzone--item').length;
-        const reached = currentUpload >= maxUpload;
 
-        if (notify) {
-            let msg = '';
-            if (reached) {
-                msg = $.i18n('maximum_upload');
-            }
-            $parent.find('.j-dropzone--feedback').html(msg);
-        }
-
-        return reached;
+        return currentUpload >= maxUpload;
     }
 
     async upload(files, $target) {
+        const $feedback = $target.parent().find('.j-dropzone--feedback');
         const $spinner = $target.find('.j-spinner');
         const maxUpload = Dropzone.getMaxUpload($target);
         const reached = Dropzone.reachLimitUpload($target, maxUpload);
 
+        $feedback.removeClass('dropzone--feedback').html('');
+
         if (reached) {
+            $feedback.addClass('dropzone--feedback').html($.i18n('maximum_upload'));
             return false;
         }
 
@@ -68,10 +64,10 @@ export default class Dropzone {
                 count -= 1;
             }
             try {
-                const response = await request.uploadFile(list);
+                const response = await Request.uploadFile(list);
                 this.callback(response, $target);
             } catch (error) {
-                console.log(error);
+                $feedback.addClass('dropzone--feedback').html(error);
             }
         }
 

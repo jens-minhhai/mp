@@ -1,5 +1,4 @@
-// import env from '../../app/env';
-import Basic from './basic';
+import App from './app';
 
 export default class Request {
     static get(url = '') {
@@ -9,21 +8,17 @@ export default class Request {
                     return response;
                 }
                 return new Promise((resolve, reject) => {
-                    const error = {
-                        status: response.status,
-                        statusText: response.statusText
-                    };
-                    reject(error);
+                    reject(App.i18n(`error.${response.status}`, response.statusText));
                 });
             })
             .then(response => response.json())
             .catch((error) => {
-                throw new Error(error);
+                throw error;
             });
     }
 
     static async token() {
-        const token = await this.get(Basic.env('url.token'));
+        const token = await this.get(App.env('url.token'));
         return token.token;
     }
 
@@ -44,16 +39,12 @@ export default class Request {
                 }
 
                 return new Promise((resolve, reject) => {
-                    const error = {
-                        status: response.status,
-                        statusText: response.statusText
-                    };
-                    reject(error);
+                    reject(App.i18n(`error.${response.status}`, response.statusText));
                 });
             })
             .then(response => response.json())
             .catch((error) => {
-                throw new Error(error);
+                throw error;
             });
     }
 
@@ -63,6 +54,6 @@ export default class Request {
             data.append(i, file);
         });
 
-        return this.post(Basic.env('url.upload'), data);
+        return this.post(App.env('url.upload'), data);
     }
 }

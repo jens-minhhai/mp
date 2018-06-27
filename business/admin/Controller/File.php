@@ -11,7 +11,7 @@ class File extends Base
     public function postUpload()
     {
         $config = [
-            'path' => date('y/m'),
+            'path' => date('y/W'),
             'url' => Config::read('app.host.media') . '/',
             'location' => ROOT . DIRECTORY_SEPARATOR . env('APP_UPLOAD_PATH'),
             'image' => true,

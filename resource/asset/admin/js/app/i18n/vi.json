@@ -1,3 +1,4 @@
 {
-  "maximum_upload": "Đã đạt định mức file upload tối đa."
+  "error.413": "File vượt quá dung lượng cho phép.",
+  "maximum_upload": "Đã đạt định mức có thể upload.",
 }

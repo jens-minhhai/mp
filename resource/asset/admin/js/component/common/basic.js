@@ -1,10 +1,4 @@
-import env from '../env';
-
 export default class Basic {
-    static env(path) {
-        return (path.split('.').reduce((o, i) => o[i], env));
-    }
-
     static sanitize(str) {
         return String(str)
             .replace(/&/g, '&amp;')
